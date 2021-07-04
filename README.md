@@ -43,3 +43,16 @@ The primary goal of RECALL is to provide a web-based interactive game, that is f
 This is my second Milestone Project that must be developed as part of my Full Stack software development course with Code Institute.
 
 The main requirements were to design, develop and implement a dynamic front-end web application using **HTML5**, **CSS3** and **JavaScript**.
+
+#### Player Goals
+The player is looking for:
+- An enjoyable and entertaining game to play, with clear instructions.
+- High Score system that promotes the user to return to the game. 
+- An intuitive and vibrant interface. 
+- Visual and audio stimulation during play time.
+
+#### Developer / Site Owner Goals
+The Developer is looking to:
+- Create a fun and entertaining game they would play themselves and share with their friends and family.
+- Demonstrate their expertise using multiple software development skills, implementing newly learned languages with libraries and API's to create the finished product.
+- Deploy a project they are proud and excited to have on their portfolio.
