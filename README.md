@@ -2,15 +2,14 @@
 
 ![Preview](assets/readme-assets/??????.png)
 
-[Link to the Live Project](https://samburgess93.github.io/????/).
+[Link to the Live Project](https://github.com/SamBurgess93/Recall).
 
 ## Table of contents
 1. [Introduction](#introduction)
 2. [UX](#ux)
-    1. [Ideal User Demographic](#ideal-user-demographic)
+    1. [Project Goals](#project-goals)
     2. [User Stories](#user-stories)
     3. [Development Planes](#development-planes)
-    4. [Design](#design)
 3. [Features](#features)
     1. [Design Features](#design-features) 
     2. [Existing Features](#existing-features)
@@ -144,7 +143,7 @@ Main Page:
 
 - Form:
 
-     ![Suggestions Form](assets/readme-files/form-mockup.png "Suggestions Form Wireframe")
+     (assets/readme-files/form-mockup.png)
 
      <strong>5. <u>Surface</u></strong>
 
@@ -169,3 +168,26 @@ Main Page:
 
 
 [Back to top ⇧](#table-of-contents)
+
+## **Features**
+***
+
+### **Existing Features**
+
+Included in the **game** is:
+
+* **Logo and developers name:** A logo telling the name of the game "RECALL" and who it is by.  
+* **Start a game button:** To begin the game.  
+* **How To Play button:** Where the user can click and a modal shows up explaining the way to interact with the game.
+* **Contact button:** Where the user can click and modal pop up with a contact form and socials(leads to external sites). The user can then fill out the form with email and message query (with validation, “@” and “.” etc.) and submitted to contact the developer.
+* **Option buttons:** To give the user options and make use of their decision-making skills. 
+* **Try Again button:** In the end there will be an option to try the game again for a different outcome.
+* **HighScore:** . 
+* **Current Score:** To tell the player what their live score is in real time.
+* **404 page:** A message telling the user they have accessed a page that does not exist. Including a button that is linked to index.html that prompts them to return to the site.
+
+
+### **Features Left to Implement**
+
+* Add music for user experience.
+* Add a more designed successful sent message when sending a message from the modal form. 
