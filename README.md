@@ -56,3 +56,20 @@ The Developer is looking to:
 - Create a fun and entertaining game they would play themselves and share with their friends and family.
 - Demonstrate their expertise using multiple software development skills, implementing newly learned languages with libraries and API's to create the finished product.
 - Deploy a project they are proud and excited to have on their portfolio.
+
+### User Stories
+**As a player, I want to:**
+
+
+1. Have the ability to create my own username, to personalise the experience.
+2. Make the process of starting the game intuitive. 
+3. To be able track my progress during the game, with a clear score counter.
+4. Clearly know when my answers are correct/incorrect through visual and auditory feedback.
+5. Have the ability to toggle sound effects on or off.
+6. View the highest score for my session, using a high score counter.
+7. Have control on what happens on the end each game, to either play again or end the session.
+8. Connect with the developer on a social platform of my choosing to see their other projects.
+9. Have the ability to communicate with the developer to provide feedback on the overall experience, to improve the game.
+10. Have the option to play the game on any device, whether it be desktop, tablet or mobile phone.
+
+
