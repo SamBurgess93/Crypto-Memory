@@ -73,3 +73,58 @@ The Developer is looking to:
 10. Have the option to play the game on any device, whether it be desktop, tablet or mobile phone.
 
 
+### Development Planes
+
+In order to design and create a web-based interactive game, the developer distinguished the required functionality of the site and how it would answer the user stories, as described above, using the **Five Development Planes**:
+
+<strong>1. <u>Strategy</u></strong>
+
+Broken into three categories, the website will focus on the following target audiences:
+- **Roles:**
+     - New Players
+     - Current Players
+     - Returning Players
+
+- **Demographic:**
+     - Puzzle game Lovers
+     - Aged 10 years and up
+
+- **Psychographics:**
+     - Personality & Attitudes:
+          - Fun-driven
+          - Good memory
+          - Competitive
+    
+
+The website needs to enable the **user** to:
+- Play with ease, interacting without complications
+- Control sound settings
+- See Current and High Scores
+- Get access to instructions if needed
+- Provide suggestions and feedback to the developer
+- Connect with developer through social links
+
+The website needs to enable the **client** to:
+- Enjoy playing their own game
+- Allow for user feedback and suggestions
+- Communicate with users on social links
+
+<strong>2. <u>Scope</u></strong>
+
+The scope was created from using the Strategy previously defined. This allowed us to align the features to deliver on the strategy. This was seperated into two categories:
+- **Content Requirements**
+     - The player will be looking for:
+          - Dynamic and inviting visuals
+          - Simple and vibrant content
+          - Current and High scores
+          - Creator information 
+
+- **Functionality Requirements**
+     - The user will be able to:
+          - Play with ease
+          - Access Current and High Scores
+          - Reach out to the developer
+               - Suggestions
+               - Social links
+
+               
