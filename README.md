@@ -127,4 +127,45 @@ The scope was created from using the Strategy previously defined. This allowed u
                - Suggestions
                - Social links
 
-               
+
+<strong>3. <u>Structure</u></strong>
+
+The information architecture was organized in a **hierarchial tree structure** in order to ensure that users could navigate through the site with ease and efficiency, with the following results: 
+
+![Site Map](assets/readme-files/????.png)
+
+<strong>4. <u>Skeleton</u></strong>
+
+Wireframe mockups were created in a [Figma Workspace](https://www.figma.com/file/vWfRZMJwTLShb5zcrlGXG4/RECALL?node-id=0%3A1 "Link to RECALL Figma Workspace") with providing a positive user experience in mind:
+
+Main Page:
+- Welcome Modal:
+
+
+- Form:
+
+     ![Suggestions Form](assets/readme-files/form-mockup.png "Suggestions Form Wireframe")
+
+     <strong>5. <u>Surface</u></strong>
+
+
+- <strong>Colour Scheme</strong>
+
+     - I used the palette maker from the Coolors website to choose my color scheme.
+
+     - The chosen colour scheme was specifically selected in order to define the tone of the game.
+
+     - A General palette was created, with this atmosphere in mind, and was used in designing graphics and complimentary text colour:
+
+          ![Colors](assets/readme-files/palette.png "General Colour Palette")
+
+
+
+- <strong>Typography</strong>
+
+     - The primary font chosen is [Roboto](https://fonts.google.com/specimen/Roboto?preview.text_type=custom&query=roboto). A sans-serif typeface, Roboto is geometrically shaped and is easily readable.
+
+     - The charismatic combination of the typefaces compliments the clean aesthetic and entertaining theme set by the colour palette.
+
+
+[Back to top ⇧](#table-of-contents)
