@@ -175,28 +175,28 @@ Main Page:
 
 Included in the **game** is:
 
-* **Logo and developers name:** A logo telling the name of the game "RECALL" and who it is by.  
-* **Start a game button:** To begin the game.  
-* **How To Play button:** Where the user can click and a modal shows up explaining the way to interact with the game.
-* **Contact button:** Where the user can click and modal pop up with a contact form and socials(leads to external sites). The user can then fill out the form with email and message query (with validation, “@” and “.” etc.) and submitted to contact the developer.
-* **Option buttons:** To give the user options and make use of their decision-making skills. 
-* **Try Again button:** In the end there will be an option to try the game again for a different outcome.
-* **HighScore:** . 
-* **Social Icons** -  The chosen social platforms are displayed using appropriate icons.
-* **Time Counter** - A time counter, displaying the time elapsed since page load, gives users feedback on how long they have been playing, in minutes and seconds. This is then displayed at game end.
-* **Session Storage** - The `sessionStorage` function is used to store user information such as **username**, player's **high score** and the chosen **user preferences**.
-* **Current Score:** To tell the player what their live score is in real time.
-* **404 page:** A message telling the user they have accessed a page that does not exist. Including a button that is linked to index.html that prompts them to return to the site.
+- **Logo and developers name:** A logo telling the name of the game "RECALL" and who it is by.  
+- **Start a game button:** To begin the game.  
+- **How To Play button:** Where the user can click and a modal shows up explaining the way to interact with the game.
+- **Contact button:** Where the user can click and modal pop up with a contact form and socials(leads to external sites). The user can then fill out the form with email and message query (with validation, “@” and “.” etc.) and submitted to contact the developer.
+- **Option buttons:** To give the user options and make use of their decision-making skills. 
+- **Try Again button:** In the end there will be an option to try the game again for a different outcome.
+- **HighScore:** . 
+- **Social Icons** -  The chosen social platforms are displayed using appropriate icons.
+- **Time Counter** - A time counter, displaying the time elapsed since page load, gives users feedback on how long they have been playing, in minutes and seconds. This is then displayed at game end.
+- **Session Storage** - The `sessionStorage` function is used to store user information such as **username**, player's **high score** and the chosen **user preferences**.
+- **Current Score:** To tell the player what their live score is in real time.
+- **404 page:** A message telling the user they have accessed a page that does not exist. Including a button that is linked to index.html that prompts them to return to the site.
 
 
 ### **Features Left to Implement**
 
-* Add music for user experience.
-* Add a more designed successful sent message when sending a message from the modal form. 
-* **Beat The Clock**
+- Add music for user experience.
+- Add a more designed successful sent message when sending a message from the modal form. 
+- **Beat The Clock**
      - Allowing users to race against the clock in their chosen category. 
      - The developer did try to implement this feature in the current release but it created a bug that was, unfortunately, beyond their skill level. After further learning, the developer hopes to apply this to future releases.
-* An online leadership board, allowing players to see the High Scores of other players.
+- An online leadership board, allowing players to see the High Scores of other players.
      - This would require the use of a database in order to implement. 
 
 [Back to top ⇧](#table-of-contents)    
@@ -206,6 +206,7 @@ Included in the **game** is:
 ### Main Languages Used
 - [HTML5](https://en.wikipedia.org/wiki/HTML5 "Link to HTML Wiki")
 - [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets "Link to CSS Wiki")
+- [JavaScript](https://en.wikipedia.org/wiki/JavaScript "Link to JavaScript Wiki")
 
 ### Additional Languages Used
 - [JavaScript](https://en.wikipedia.org/wiki/JavaScript "Link to JavaScript Wiki")
@@ -226,6 +227,9 @@ Included in the **game** is:
      - Figma was used to create the wireframes during the design phase of the project.
 - [Am I Responsive?](http://ami.responsivedesign.is/# "Link to Am I Responsive Homepage")
      - Am I Responsive was used in order to see responsive design throughout the process and to generate mockup imagery to be used.
+- [jQuery](https://jquery.com/ "Link to jQuery page")
+     - jQuery was used to simplify the JavaScript code used.
+
 
 [Back to top ⇧](#table-of-contents)
 
@@ -295,8 +299,16 @@ Further reading and troubleshooting on cloning a repository from GitHub [here](h
 
 ### Images
 ### Code 
+I consulted the following sites to better understand some elements of code:
+- [Stack Overflow](https://stackoverflow.com/ "Link to Stack Overflow page")
+- [W3Schools](https://www.w3schools.com/ "Link to W3Schools page")
+- [Bootstrap](https://getbootstrap.com/ "Link to BootStrap page")
+- [Codepen](https://codepen.io/ "Link to Codepen page")
+- [JSfiddle](https://jsfiddle.net/ "Link to JSfiddle page")
 
 ## Acknowledgements
 
 - I would like to thank my friends and family for their time and opinions on the website.
 - I would like to thank my mentor, Seun, for her help and constructive feedback throughout the project.
+
+[Back to top ⇧](#table-of-contents)
