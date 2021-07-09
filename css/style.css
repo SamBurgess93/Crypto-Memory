@@ -10,6 +10,14 @@
     display: flex;
     background: #060AB2;
   }
+
+  .page-title {
+    color: #ff5100;
+    font-family: 'Permanent Marker', cursive;
+    font-weight: normal;
+    text-align: center;
+    font-size: 25px;
+  }
   
   .memory-game {
     width: 640px;
@@ -19,6 +27,7 @@
     flex-wrap: wrap;
     perspective: 1000px;
   }
+  
 
   .memory-card {
     width: calc(25% - 10px);
