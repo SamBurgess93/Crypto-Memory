@@ -1,67 +1,56 @@
-console.log("hey");
 
-let clickedCard = null;
-let preventClick = false;
-let combosFound = 0;
+const cards = document.querySelectorAll('.memory-card');
 
+let hasFlippedCard = false;
+let lockBoard = false;
+let firstCard, secondCard;
 
-const colors = [
-    "pink",
-    "yellow",
-    "green",
-    "red",
-    "blue",
-    "violet",
-    "orange",
-    "brown",
-]
+function flipCard() {
+    if (lockBoard) return;
+    if (this === firstCard) return;
+    this.classList.add('flip');
 
-const cards = [...document.querySelectorAll(".card")];
-for (let color of colors) {
-    const cardAIndex = parseInt(Math.random() * cards.length);
-    const cardA = cards[cardAIndex];
-    cards.splice(cardAIndex, 1);
-    cardA.className += ` ${color}`;
-    cardA.setAttribute("data-color", color);
-
-    const cardBIndex = parseInt(Math.random()*cards.length);
-    const cardB = cards[cardBIndex];
-    cards.splice(cardBIndex, 1);
-    cardB.className += ` ${color}`;
-    cardB.setAttribute("data-color", color);
-}
-
-function onCardClicked(e){
-    const target = e.currentTarget;
-
-    if (preventClick || target === clickedCard || target.className.includes("done")) {
-        return;
+    if (!hasFlippedCard) {
+      hasFlippedCard = true;
+      firstCard = this;
+      return;
     }
-    target.className = target.className
-            .replace("color-hide", "")
-            .trim();
-            target.className += " done";
+ 
+    secondCard = this;
     
-    if(!clickedCard) {
-        clickedCard = target;       
-    } else if (clickedCard){
-        if(clickedCard.getAttribute("data-color") !== 
-        target.getAttribute("data-color")){
-            preventClick = true;
-            setTimeout(()=>{
-                console.log("we are here");
-                clickedCard.className = clickedCard.className.replace("done", "").trim() + "color-hide";
-                target.className = target.className.replace("done", "").trim() + "color-hide";
-                clickedCard = null;
-                preventClick = false;
-            }, 500);
-        } else{
-        combosFound++;
-        clickedCard = null;
-        if (combosFound === 8){
-            alert("YOU WIN");
-        }
-        }
+ 
+    checkForMatch();
+  }
+ 
+  function checkForMatch() {
+    if (firstCard.dataset.coin === secondCard.dataset.coin) {
+      disableCards();
+      return;
     }
+ 
+    unflipCards();
     
-}
+  }
+ 
+  function disableCards() {
+    firstCard.removeEventListener('click', flipCard);
+    secondCard.removeEventListener('click', flipCard);
+    resetBoard();
+  }
+ 
+  function unflipCards() {
+    lockBoard = true;
+    
+    setTimeout(() => {
+      firstCard.classList.remove('flip');
+      secondCard.classList.remove('flip');
+      resetBoard();
+    }, 1500);
+  }
+
+  function resetBoard() {
+    [hasFlippedCard, lockBoard] = [false, false];
+    [firstCard, secondCard] = [null, null];
+  }
+    
+cards.forEach(card => card.addEventListener('click', flipCard));
