@@ -1,14 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recall</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="assets/style.css" type="text/css" />
+    
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <h1 class="page-title">Crypto Recall</h1>
-    <section class="memory-game">
+    <div class="wrapper">
+            <div class="text-wrapper">
+                <header class="text-header" id="header">Crypto Memory</header>
+            </div>
+   
+    <div class="memory-game">
         <div class="memory-card" data-coin="bitcoin">
           <img class="front-face" src="assets/img/bitcoin.png" alt="React">
           <img class="back-face" src="assets/img/backcard.png" alt="Memory Card">
@@ -68,7 +78,8 @@
           <img class="front-face" src="assets/img/dogecoin.png" alt="Aurelia">
           <img class="back-face" src="assets/img/backcard.png" alt="Memory Card">
         </div>
-    </section>
+      </div>
+    </div>
 
     <script src="js/index.js"></script>
 </body>
