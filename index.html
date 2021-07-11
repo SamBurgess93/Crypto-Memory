@@ -12,111 +12,102 @@
 </head>
 <body>
 
-    <!-- Heading  -->
-    <div class="wrapper">
-            <div class="text-wrapper">
-                <header class="text-header" id="header">Crypto Memory</header>
-            </div>
+  
    
 
 
-      <div class="container">
-        <div class="row">
+    <div class="container">
+      <div class="row">
             
-    <!-- Cards -->
-    <div class="col-xlg-7 column-padding memory-game">
-        <div class="memory-card" data-coin="bitcoin">
-          <img class="front-face" src="assets/img/bitcoin.png" alt="React">
-          <img class="back-face" src="assets/img/backcard.png" alt="Memory Card">
+        <!-- Cards -->
+        <div class="col-xlg-7 column-padding memory-game">
+            <div class="memory-card" data-coin="bitcoin">
+              <img class="front-face" src="assets/img/bitcoin.png" alt="React">
+              <img class="back-face" src="assets/img/backcard.png" alt="Memory Card">
+            </div>
+          
+            <div class="memory-card" data-coin="xrp">
+              <img class="front-face" src="assets/img/xrp.png" alt="React">
+              <img class="back-face" src="assets/img/backcard.png" alt="Memory Card">
+            </div>
+          
+            <div class="memory-card" data-coin="tether">
+              <img class="front-face" src="assets/img/tether.png" alt="Angular">
+              <img class="back-face" src="assets/img/backcard.png" alt="Memory Card">
+            </div>
+          
+            <div class="memory-card" data-coin="cardano">
+              <img class="front-face" src="assets/img/cardano.png" alt="Angular">
+              <img class="back-face" src="assets/img/backcard.png" alt="Memory Card">
+            </div>
+          
+            <div class="memory-card" data-coin="bitcoin">
+              <img class="front-face" src="assets/img/bitcoin.png" alt="Ember">
+              <img class="back-face" src="assets/img/backcard.png" alt="Memory Card">
+            </div>
+          
+            <div class="memory-card" data-coin="etheruem">
+              <img class="front-face" src="assets/img/etheruem.png" alt="Ember">
+              <img class="back-face" src="assets/img/backcard.png" alt="Memory Card">
+            </div>
+          
+            <div class="memory-card" data-coin="cardano">
+              <img class="front-face" src="assets/img/cardano.png" alt="Vue">
+              <img class="back-face" src="assets/img/backcard.png" alt="Memory Card">
+            </div>
+          
+            <div class="memory-card" data-coin="dogecoin">
+              <img class="front-face" src="assets/img/dogecoin.png" alt="Vue">
+              <img class="back-face" src="assets/img/backcard.png" alt="Memory Card">
+            </div>
+          
+            <div class="memory-card" data-coin="etheruem">
+              <img class="front-face" src="assets/img/etheruem.png" alt="Backbone">
+              <img class="back-face" src="assets/img/backcard.png" alt="Memory Card">
+            </div>
+          
+            <div class="memory-card" data-coin="xrp">
+              <img class="front-face" src="assets/img/xrp.png" alt="Backbone">
+              <img class="back-face" src="assets/img/backcard.png" alt="Memory Card">
+            </div>
+          
+            <div class="memory-card" data-coin="tether">
+              <img class="front-face" src="assets/img/tether.png" alt="Aurelia">
+              <img class="back-face" src="assets/img/backcard.png" alt="Memory Card">
+            </div>
+          
+            <div class="memory-card" data-coin="dogecoin">
+              <img class="front-face" src="assets/img/dogecoin.png" alt="Aurelia">
+              <img class="back-face" src="assets/img/backcard.png" alt="Memory Card">
+            </div>
+          </div>
+
+          <!-- logo and high score section -->
+          <div class="col-xlg-5 column-padding">
+            <!-- logo and h1 -->
+            <div class="logo">
+                <img src="assets/images/logo.png" alt="logo">
+                <h1 class="teko">Crypto Memory</h1>
+            </div>
+            <!-- high score section -->
+            <div class="high-score">
+                <!-- fontawesome icons -->
+                <div class="icons">
+                    <i class="fas fa-undo" onclick="restartGame()"></i>
+                    <i class="fas fa-volume-mute" id="play-pause" onclick="playPause()"></i>
+                    <i class="fas fa-question" id="how-to"></i>
+                </div>
+                <!-- moves and high score -->
+                <div class="moves-high-score">
+                    <p class="amatic">Moves: <span id="moves">0</span></p>
+                    <p class="amatic time">Timer: <span id="timer">00:00</span></p>
+                    <p class="amatic">Last Round: <span id="highscore">0</span></p>
+                </div>
+          </div>
         </div>
-      
-        <div class="memory-card" data-coin="xrp">
-          <img class="front-face" src="assets/img/xrp.png" alt="React">
-          <img class="back-face" src="assets/img/backcard.png" alt="Memory Card">
-        </div>
-      
-        <div class="memory-card" data-coin="tether">
-          <img class="front-face" src="assets/img/tether.png" alt="Angular">
-          <img class="back-face" src="assets/img/backcard.png" alt="Memory Card">
-        </div>
-      
-        <div class="memory-card" data-coin="cardano">
-          <img class="front-face" src="assets/img/cardano.png" alt="Angular">
-          <img class="back-face" src="assets/img/backcard.png" alt="Memory Card">
-        </div>
-      
-        <div class="memory-card" data-coin="bitcoin">
-          <img class="front-face" src="assets/img/bitcoin.png" alt="Ember">
-          <img class="back-face" src="assets/img/backcard.png" alt="Memory Card">
-        </div>
-      
-        <div class="memory-card" data-coin="etheruem">
-          <img class="front-face" src="assets/img/etheruem.png" alt="Ember">
-          <img class="back-face" src="assets/img/backcard.png" alt="Memory Card">
-        </div>
-      
-        <div class="memory-card" data-coin="cardano">
-          <img class="front-face" src="assets/img/cardano.png" alt="Vue">
-          <img class="back-face" src="assets/img/backcard.png" alt="Memory Card">
-        </div>
-      
-        <div class="memory-card" data-coin="dogecoin">
-          <img class="front-face" src="assets/img/dogecoin.png" alt="Vue">
-          <img class="back-face" src="assets/img/backcard.png" alt="Memory Card">
-        </div>
-      
-        <div class="memory-card" data-coin="etheruem">
-          <img class="front-face" src="assets/img/etheruem.png" alt="Backbone">
-          <img class="back-face" src="assets/img/backcard.png" alt="Memory Card">
-        </div>
-      
-        <div class="memory-card" data-coin="xrp">
-          <img class="front-face" src="assets/img/xrp.png" alt="Backbone">
-          <img class="back-face" src="assets/img/backcard.png" alt="Memory Card">
-        </div>
-      
-        <div class="memory-card" data-coin="tether">
-          <img class="front-face" src="assets/img/tether.png" alt="Aurelia">
-          <img class="back-face" src="assets/img/backcard.png" alt="Memory Card">
-        </div>
-      
-        <div class="memory-card" data-coin="dogecoin">
-          <img class="front-face" src="assets/img/dogecoin.png" alt="Aurelia">
-          <img class="back-face" src="assets/img/backcard.png" alt="Memory Card">
-        </div>
+
       </div>
-
-      <!-- logo and high score section -->
-      <div class="col-xlg-5 column-padding">
-        <!-- logo and h1 -->
-        <div class="logo">
-            <img src="assets/images/logo.png" alt="logo">
-            <h1 class="amatic">Plant Memory</h1>
-        </div>
-        <!-- high score section -->
-        <div class="high-score">
-            <!-- fontawesome icons -->
-            <div class="icons">
-                <i class="fas fa-undo" onclick="restartGame()"></i>
-                <i class="fas fa-volume-mute" id="play-pause" onclick="playPause()"></i>
-                <i class="fas fa-question" id="how-to"></i>
-            </div>
-            <!-- moves and high score -->
-            <div class="moves-high-score">
-                <p class="amatic">Moves: <span id="moves">0</span></p>
-                <p class="amatic time">Timer: <span id="timer">00:00</span></p>
-                <p class="amatic">Last Round: <span id="highscore">0</span></p>
-            </div>
-            <!-- ligh/dark theme buttons -->
-            <div class="theme-buttons">
-                <button type="button" class="btn btn-light amatic" id="light-theme">Light Theme</button>
-                <button type="button" class="btn btn-dark amatic" id="dark-theme">Dark Theme</button>
-            </div>
-        </div>
     </div>
-
-    </div>
-  </div>
 
     <script src="js/index.js"></script>
 </body>
