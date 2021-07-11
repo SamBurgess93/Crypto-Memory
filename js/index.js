@@ -1,9 +1,19 @@
 
+/* ---------- game variables ---------- */
 const cards = document.querySelectorAll('.memory-card');
-
 let hasFlippedCard = false;
 let lockBoard = false;
 let firstCard, secondCard;
+
+
+/* ---------- counting moves variables ---------- */
+let counter = document.getElementById('moves');
+var moves = 0;
+
+const timeHour = document.getElementById('timer');
+let timeSecond = 0;
+timeHour.innerHTML = `00:0${timeSecond}`;
+
 
 function flipCard() {
     if (lockBoard) return;
@@ -17,9 +27,9 @@ function flipCard() {
     }
  
     secondCard = this;
-    
- 
     checkForMatch();
+    countMoves();
+
   }
  
   function checkForMatch() {
@@ -49,6 +59,29 @@ function flipCard() {
   }
 
 
+  // When clicking on the play button the start-game div disappears. 
+  // coded with help from https://stackoverflow.com/questions/5299895/jquery-detecting-and-removing-an-element-clicked
+
+  $(".start-game").on("click", function () {
+  $(this).remove();
+  // timer coded with help from https://www.youtube.com/watch?v=_a4XCarxwr8
+  const timeCounter = setInterval(() => {
+      timeSecond++;
+      displayTime(timeSecond);
+      if (matches == 8) {
+          clearInterval(timeCounter);
+          localStorage.setItem("lastRoundTime", timeHour.innerHTML);
+      }
+  }, 1000);
+
+  // Time display function 
+  function displayTime(second) {
+    const min = Math.floor(second / 60);
+    const sec = Math.floor(second % 60);
+    timeHour.innerHTML = `${min < 10 ? '0' : ''}${min}:${sec < 10 ? '0' : ''}${sec}`;
+}
+
+
   function resetBoard() {
     [hasFlippedCard, lockBoard] = [false, false];
     [firstCard, secondCard] = [null, null];
@@ -61,6 +94,14 @@ function flipCard() {
     });
   })();
 
+
+  // coded with help from https://scotch.io/tutorials/how-to-build-a-memory-matching-game-in-javascript#toc-3-moves
+  function countMoves() {
+  moves++;
+  counter.innerHTML = moves;
+  }
+
+  // resets the board
   function reset() {
     location.reload();
   }
