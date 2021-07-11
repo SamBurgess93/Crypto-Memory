@@ -4,6 +4,8 @@ const cards = document.querySelectorAll('.memory-card');
 let hasFlippedCard = false;
 let lockBoard = false;
 let firstCard, secondCard;
+let gameOn = false;
+
 
 
 /* ---------- counting moves variables ---------- */
@@ -11,14 +13,20 @@ let counter = document.getElementById('moves');
 var moves = 0;
 
 const timeHour = document.getElementById('timer');
-let timeSecond = 0;
-timeHour.innerHTML = `00:0${timeSecond}`;
+
 
 
 function flipCard() {
+
+  if (!gameOn) {
+    gameOn = true;
+    timer();
+    }
+
     if (lockBoard) return;
     if (this === firstCard) return;
     this.classList.add('flip');
+    
 
     if (!hasFlippedCard) {
       hasFlippedCard = true;
@@ -62,25 +70,26 @@ function flipCard() {
   // When clicking on the play button the start-game div disappears. 
   // coded with help from https://stackoverflow.com/questions/5299895/jquery-detecting-and-removing-an-element-clicked
 
-  $(".start-game").on("click", function () {
-  $(this).remove();
-  // timer coded with help from https://www.youtube.com/watch?v=_a4XCarxwr8
-  const timeCounter = setInterval(() => {
-      timeSecond++;
-      displayTime(timeSecond);
-      if (matches == 8) {
-          clearInterval(timeCounter);
-          localStorage.setItem("lastRoundTime", timeHour.innerHTML);
-      }
-  }, 1000);
+
 
   // Time display function 
-  function displayTime(second) {
-    const min = Math.floor(second / 60);
-    const sec = Math.floor(second % 60);
-    timeHour.innerHTML = `${min < 10 ? '0' : ''}${min}:${sec < 10 ? '0' : ''}${sec}`;
-}
-
+  let time;
+  let minutes = 0;
+  let seconds = 0;
+  let timeStart = false;
+  timeHour.innerHTML = minutes + " : " + seconds;
+  
+ 
+  function timer() {
+      time = setInterval(function() {
+          seconds++;
+          if (seconds === 59) {
+              minutes++;
+              seconds = 0;
+          }
+          timeHour.innerHTML = minutes + " : " + seconds;
+      }, 1000);
+  }
 
   function resetBoard() {
     [hasFlippedCard, lockBoard] = [false, false];
