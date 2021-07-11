@@ -60,5 +60,9 @@ function flipCard() {
       card.style.order = ramdomPos;
     });
   })();
+
+  function reset() {
+    location.reload();
+  }
     
 cards.forEach(card => card.addEventListener('click', flipCard));

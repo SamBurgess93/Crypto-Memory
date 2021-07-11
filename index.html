@@ -33,7 +33,7 @@
             </div>
           
             <div class="memory-card" data-coin="tether">
-              <img class="front-face" src="assets/img/tether.png" alt="Angular">
+              <img class="front-face" src="assets/img/tether5.png" alt="Angular">
               <img class="back-face" src="assets/img/backcard.png" alt="Memory Card">
             </div>
           
@@ -73,7 +73,7 @@
             </div>
           
             <div class="memory-card" data-coin="tether">
-              <img class="front-face" src="assets/img/tether.png" alt="Aurelia">
+              <img class="front-face" src="assets/img/tether5.png" alt="Aurelia">
               <img class="back-face" src="assets/img/backcard.png" alt="Memory Card">
             </div>
           
@@ -90,10 +90,9 @@
                 <h1 class="text-style-head">Crypto Memory</h1>
             </div>
             <!-- ScoreBoard -->
-            <div class="high-score">
+            <div class="scoreboard">
                 <!-- fontawesome icons -->
                 <div class="icons">
-                    <i class="fas fa-undo" onclick="restartGame()"></i>
                     <i class="fas fa-volume-mute" id="play-pause" onclick="playPause()"></i>
                     <i class="fas fa-question" id="how-to"></i>
                 </div>
@@ -103,8 +102,12 @@
                     <p class="text-style time">Timer: <span id="timer">00:00</span></p>
                     <p class="text-style">Last Round: <span id="highscore">0</span></p>
                 </div>
+                <!-- Reset button-->
+                <div id="reset-container">
+                  <button id="reset" class=" btn btn-light btn-xl text-style reset" type="reset" onclick="reset()">Reset</button>
+                </div>
+            </div>
           </div>
-        </div>
 
       </div>
     </div>
