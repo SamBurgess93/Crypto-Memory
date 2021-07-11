@@ -1,15 +1,9 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Teko&display=swap');
 
-.teko {
-  font-family: 'Teko', sans-serif;
-}
 
-* {
-    padding: 0;
-    margin: auto;
-    box-sizing: border-box;
-    font-family: 'Permanent Marker', cursive;
+  * {
+    margin: auto;    
   }
 
   body {
@@ -19,30 +13,39 @@
   }
 
 
-  /* Heading and Text Styles*/
-  .text-style {
+  /*-----Text-----*/
+
+  .text-style-head {
     color: #e0ded0;
-    font-family: Peralta, Roboto, sans-serif;
+    font-family: 'Teko', sans-serif;
     text-align: center;
-    font-size: 20px;
+    font-size: 60px;
     margin-bottom: 8px;
 }
 
-  .text-header {
+  .text-style {
     color: #e0ded0;
-    font-family: Peralta, Roboto, sans-serif;
-    font-size: 35px;
+    font-family: 'Teko', sans-serif;
+    font-size: 20px;
+  }
+
+  /*-----Scoreboard-----*/
+
+  .icons {
+    font-size: 32px;
+    margin-bottom: 20px;
+    display: inline-block;
     text-align: center;
-    margin: auto;
-}
-
-  .wrapper {
-    margin:auto;
+    width: 100%;
+    color: #e0ded0;
   }
 
-  .text-wrapper{
-    padding: 11px;
-  }
+  .icons i {
+    padding-left: 20px;
+    padding-right: 20px;
+  } 
+
+
 
 /* Card Grid styling */
 
