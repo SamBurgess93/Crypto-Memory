@@ -13,18 +13,20 @@
     background: #060AB2;
   }
 
+
+  /* Heading and Text Styles*/
   .text-style {
-    color: #FEE73B;
+    color: #e0ded0;
     font-family: Peralta, Roboto, sans-serif;
     text-align: center;
-    font-size: 13px;
+    font-size: 20px;
     margin-bottom: 8px;
 }
 
   .text-header {
-    color: #FEE73B;
+    color: #e0ded0;
     font-family: Peralta, Roboto, sans-serif;
-    font-size: 25px;
+    font-size: 35px;
     text-align: center;
     margin: auto;
 }
@@ -37,7 +39,7 @@
     padding: 11px;
   }
 
-
+/* Card Grid styling */
 
   .memory-game {
     width: 640px;
@@ -84,7 +86,7 @@
     transform: rotateY(180deg);
   }
 
-
+/* Score, Moves and Reset Button */
 
   .score_moves_wrap {
     text-align: center;
