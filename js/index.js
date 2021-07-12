@@ -5,6 +5,7 @@ let hasFlippedCard = false;
 let lockBoard = false;
 let firstCard, secondCard;
 let gameOn = false;
+let playerScore = 0;
 
 
 
@@ -42,8 +43,11 @@ function flipCard() {
  
   function checkForMatch() {
     if (firstCard.dataset.coin === secondCard.dataset.coin) {
+      updateScore(50);
       disableCards();
       return;
+    } else {
+      updateScore(-20);
     }
  
     unflipCards();
@@ -103,6 +107,15 @@ function flipCard() {
     });
   })();
 
+
+
+  function updateScore(scoreMod) {
+    playerScore = playerScore + scoreMod;
+
+    let score = document.getElementById("highscore");
+    score.innerText = playerScore;
+
+}
 
   // coded with help from https://scotch.io/tutorials/how-to-build-a-memory-matching-game-in-javascript#toc-3-moves
   function countMoves() {

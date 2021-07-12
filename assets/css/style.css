@@ -31,6 +31,12 @@
 
   /*-----Scoreboard-----*/
 
+  .scoreboard {
+    height: 310px;
+    padding: 20px;
+    background-color: #1C7CCC;
+  }
+
   .icons {
     font-size: 32px;
     margin-bottom: 20px;
