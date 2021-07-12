@@ -6,6 +6,8 @@ let lockBoard = false;
 let firstCard, secondCard;
 let gameOn = false;
 let playerScore = 0;
+let highScore = 0;
+let matches = 0;
 
 
 
@@ -45,6 +47,10 @@ function flipCard() {
     if (firstCard.dataset.coin === secondCard.dataset.coin) {
       updateScore(50);
       disableCards();
+      matches = matches + 1;
+      if (matches == 6) {
+        gameFinished();
+    }
       return;
     } else {
       updateScore(-20);
@@ -112,10 +118,29 @@ function flipCard() {
   function updateScore(scoreMod) {
     playerScore = playerScore + scoreMod;
 
-    let score = document.getElementById("highscore");
+    let score = document.getElementById("currentScore");
     score.innerText = playerScore;
 
-}
+  }
+
+  /*if(highScore !== null){
+    if (playerScore > highScore) {
+        localStorage.setItem("highScore", playerScore);      
+    }
+  }
+  else{
+      localStorage.setItem("highScore", playerScore);
+  } */
+
+
+  updateHighscore = (score) => {
+    if (score > highscore) {
+      highscore = score;
+      
+      // This code should ideally be called once game "ends", but this game doesn't "end."
+      localStorage.setItem('highscore', score);
+    }
+  }
 
   // coded with help from https://scotch.io/tutorials/how-to-build-a-memory-matching-game-in-javascript#toc-3-moves
   function countMoves() {
@@ -126,6 +151,10 @@ function flipCard() {
   // resets the board
   function reset() {
     location.reload();
+  }
+
+  function gameFinished() {
+    updateHighscore();
   }
     
 cards.forEach(card => card.addEventListener('click', flipCard));
