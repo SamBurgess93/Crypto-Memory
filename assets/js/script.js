@@ -24,7 +24,9 @@ var matchSound = new Audio('assets/audio/correct.mp3');
 var backgroundSound = new Audio('assets/audio/background.mp3');
 flipSound.volume = 0.5;
 matchSound.volume = 0.6;
-backgroundSound = 0.4;
+backgroundSound = 0.3;
+var playPauseIcon = document.getElementById('play-pause');
+var count = 0;
 
 
 /* ---------- Last Round Score ---------- */
@@ -57,6 +59,19 @@ function flipCard() {
     countMoves();
 
   }
+
+  // coded with help from https://www.youtube.com/watch?v=wffK2OIt8u0
+  function playPause() {
+  if (count === 0) {
+      count = 1;
+      backgroundSound.play();
+      playPauseIcon.className = "fas fa-volume-up";
+  } else {
+      count = 0;
+      backgroundSound.pause();
+      playPauseIcon.className = "fas fa-volume-mute";
+  }
+}
  
   function checkForMatch() {
     if (firstCard.dataset.coin === secondCard.dataset.coin) {
