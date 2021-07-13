@@ -21,7 +21,10 @@ const timeHour = document.getElementById('timer');
 /* ---------- Sound clips ---------- */
 var flipSound = new Audio('assets/audio/flipCard.mp3');
 var matchSound = new Audio('assets/audio/correct.mp3');
-var wrongSound = new Audio('assets/audio/wrong.mp3');
+var backgroundSound = new Audio('assets/audio/background.mp3');
+flipSound.volume = 0.5;
+matchSound.volume = 0.6;
+backgroundSound = 0.4;
 
 
 /* ---------- Last Round Score ---------- */
@@ -29,6 +32,9 @@ $("#highScore").text(localStorageBestScore);
 
 
 function flipCard() {
+
+  flipSound.play();
+  flipSound.currentTime = 0;
 
   if (!gameOn) {
     gameOn = true;
@@ -57,6 +63,8 @@ function flipCard() {
       updateScore(50);
       disableCards();
       matches = matches + 1;
+      matchSound.play();
+      matchSound.currentTime = 0;
         if (matches == 6) {
             console.log("hey");
             localStorage.setItem("lastRoundScore", playerScore);
@@ -65,6 +73,7 @@ function flipCard() {
      else{
       updateScore(-20);
       unflipCards();
+      
       }
   }
  
@@ -80,6 +89,7 @@ function flipCard() {
     setTimeout(() => {
       firstCard.classList.remove('flip');
       secondCard.classList.remove('flip');
+      flipSound.play();
       resetBoard();
     }, 1500);
   }
