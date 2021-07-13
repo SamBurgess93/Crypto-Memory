@@ -9,6 +9,7 @@ let playerScore = 0;
 let highScore = 0;
 let matches = 0;
 
+/* ---------- Local Storage ---------- */
 let localStorageBestScore = localStorage.getItem("lastRoundScore", playerScore);
 
 /* ---------- counting moves variables ---------- */
@@ -16,6 +17,12 @@ let counter = document.getElementById('moves');
 var moves = 0;
 
 const timeHour = document.getElementById('timer');
+
+/* ---------- Sound clips ---------- */
+var flipSound = new Audio('assets/audio/flipCard.mp3');
+var matchSound = new Audio('assets/audio/correct.mp3');
+var wrongSound = new Audio('assets/audio/wrong.mp3');
+
 
 /* ---------- Last Round Score ---------- */
 $("#highScore").text(localStorageBestScore);
