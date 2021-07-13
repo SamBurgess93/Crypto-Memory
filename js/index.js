@@ -9,7 +9,7 @@ let playerScore = 0;
 let highScore = 0;
 let matches = 0;
 
-
+let localStorageBestScore = localStorage.getItem("lastRoundScore", playerScore);
 
 /* ---------- counting moves variables ---------- */
 let counter = document.getElementById('moves');
@@ -17,6 +17,8 @@ var moves = 0;
 
 const timeHour = document.getElementById('timer');
 
+/* ---------- Last Round Score ---------- */
+$("#highScore").text(localStorageBestScore);
 
 
 function flipCard() {
@@ -48,16 +50,15 @@ function flipCard() {
       updateScore(50);
       disableCards();
       matches = matches + 1;
-      if (matches == 6) {
-        gameFinished();
-    }
-      return;
-    } else {
+        if (matches == 6) {
+            console.log("hey");
+            localStorage.setItem("lastRoundScore", playerScore);
+        }
+    } 
+     else{
       updateScore(-20);
-    }
- 
-    unflipCards();
-    
+      unflipCards();
+      }
   }
  
   function disableCards() {
@@ -75,10 +76,6 @@ function flipCard() {
       resetBoard();
     }, 1500);
   }
-
-
-  // When clicking on the play button the start-game div disappears. 
-  // coded with help from https://stackoverflow.com/questions/5299895/jquery-detecting-and-removing-an-element-clicked
 
 
 
@@ -123,24 +120,6 @@ function flipCard() {
 
   }
 
-  /*if(highScore !== null){
-    if (playerScore > highScore) {
-        localStorage.setItem("highScore", playerScore);      
-    }
-  }
-  else{
-      localStorage.setItem("highScore", playerScore);
-  } */
-
-
-  updateHighscore = (score) => {
-    if (score > highscore) {
-      highscore = score;
-      
-      // This code should ideally be called once game "ends", but this game doesn't "end."
-      localStorage.setItem('highscore', score);
-    }
-  }
 
   // coded with help from https://scotch.io/tutorials/how-to-build-a-memory-matching-game-in-javascript#toc-3-moves
   function countMoves() {
@@ -153,8 +132,5 @@ function flipCard() {
     location.reload();
   }
 
-  function gameFinished() {
-    updateHighscore();
-  }
     
 cards.forEach(card => card.addEventListener('click', flipCard));
