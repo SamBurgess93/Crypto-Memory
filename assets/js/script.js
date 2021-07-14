@@ -61,7 +61,7 @@ function flipCard() {
   }
 
   // coded with help from https://www.youtube.com/watch?v=wffK2OIt8u0
-  function playPause() {
+  function playPauseIt() {
   if (count === 0) {
       count = 1;
       backgroundSound.play();
@@ -142,7 +142,10 @@ function flipCard() {
     });
   })();
 
-
+  //Instructions Modal   
+  $("#how-to").click(function () {
+    $("#myModal").modal('show');
+  });
 
   function updateScore(scoreMod) {
     playerScore = playerScore + scoreMod;
