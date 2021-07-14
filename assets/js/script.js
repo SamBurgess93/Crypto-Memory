@@ -147,6 +147,10 @@ function flipCard() {
     $("#myModal").modal('show');
   });
 
+  $(".close").click(function () {
+    $('#myModal').modal('hide');
+  });
+
   function updateScore(scoreMod) {
     playerScore = playerScore + scoreMod;
 

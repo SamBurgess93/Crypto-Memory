@@ -29,6 +29,10 @@
     font-size: 20px;
   }
 
+  .teko{
+    font-family: 'Teko', sans-serif;
+  }
+
   /*-----Scoreboard-----*/
 
   .scoreboard {
@@ -125,4 +129,16 @@
     position: relative;
     text-align: center;
     display: block;
+}
+
+/* ---------- modal ---------- */
+
+.modal-title {
+  font-size: 55px;
+}
+
+.close-button {
+  font-size: 24px;
+  letter-spacing: 2px;
+  background-color: #14110f; 
 }
