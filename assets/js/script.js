@@ -21,10 +21,10 @@ const timeHour = document.getElementById('timer');
 /* ---------- Sound clips ---------- */
 var flipSound = new Audio('assets/audio/flipCard.mp3');
 var matchSound = new Audio('assets/audio/correct.mp3');
-var backgroundSound = new Audio('assets/audio/background.mp3');
+var rainSound = new Audio('assets/audio/rain.mp3');
 flipSound.volume = 0.5;
 matchSound.volume = 0.6;
-backgroundSound = 0.3;
+rainSound.volume = 0.2;
 var playPauseIcon = document.getElementById('play-pause');
 var count = 0;
 
@@ -62,13 +62,13 @@ function flipCard() {
 
   // coded with help from https://www.youtube.com/watch?v=wffK2OIt8u0
   function playPauseIt() {
-  if (count === 0) {
+  if (count == 0) {
       count = 1;
-      backgroundSound.play();
+      rainSound.play();
       playPauseIcon.className = "fas fa-volume-up";
   } else {
       count = 0;
-      backgroundSound.pause();
+      rainSound.pause();
       playPauseIcon.className = "fas fa-volume-mute";
   }
 }
