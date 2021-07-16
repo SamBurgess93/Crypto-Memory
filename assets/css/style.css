@@ -125,11 +125,13 @@
     padding-right: 20px;
 }
 
-#reset-container {
+.btn-container {
     position: relative;
     text-align: center;
     display: block;
+    padding: 5px;
 }
+
 
 /* ---------- modal ---------- */
 
