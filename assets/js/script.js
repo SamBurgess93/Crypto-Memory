@@ -129,6 +129,9 @@ function flipCard() {
               minutes++;
               seconds = 0;
           }
+          if (matches == 6) {
+            clearInterval(time);
+          }  
           timeHour.innerHTML = minutes + " : " + seconds;
       }, 1000);
   }
