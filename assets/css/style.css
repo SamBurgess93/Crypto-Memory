@@ -9,7 +9,7 @@
   body {
     height: 100vh;
     display: flex;
-    background: #060AB2;
+    background: #1C5D99;
   }
 
 
@@ -38,7 +38,7 @@
   .scoreboard {
     height: 350px;
     padding: 20px;
-    background-color: #1C7CCC;
+    background-color: #639FAB;
   }
 
   .icons {
@@ -96,7 +96,7 @@
     padding: 20px;
     position: absolute;
     border-radius: 5px;
-    background: #1C7CCC;
+    background: #639FAB;
     backface-visibility: hidden;
   }
 
@@ -117,7 +117,7 @@
 }
 
 #reset {
-    background-color: #2426b3;
+    background-color: #1C5D99;
     color: #eaeaee;
     border-radius: 4px;
     text-align: center;
