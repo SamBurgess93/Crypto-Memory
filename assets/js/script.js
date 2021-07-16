@@ -90,6 +90,9 @@ function flipCard() {
       unflipCards();
       
       }
+      if (matches === 6) {
+        $("#winModal").modal("show");
+    }
   }
  
   function disableCards() {
