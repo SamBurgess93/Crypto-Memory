@@ -167,9 +167,15 @@ function flipCard() {
     $('#addFeed').modal('show');
   });
 
+  $(".close-button").click(function () {
+    $('#addFeed').modal('hide');
+  });
+
   $(".close").click(function () {
     $('#addFeed').modal('hide');
   });
+
+
   
 
   function updateScore(scoreMod) {
