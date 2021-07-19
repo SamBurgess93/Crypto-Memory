@@ -17,7 +17,6 @@
     <script type="text/javascript">
       (function(){
           emailjs.init("user_aHCXkw3nYnblx1e1Wn7Tm");
-          emailjs.send(service_pp24j2p, template_29yfchc, templateParams, userID);
     })();
     
     
@@ -188,7 +187,7 @@
                 </button>
             </div>
             <div class="modal-body mx-4">
-                <form>
+                <form onsubmit="return sendMail(this)">
                     <div class="form-group text-center">
                         <!-- Name field -->
                         <label for="formGroupExampleInput">Your Name</label>
