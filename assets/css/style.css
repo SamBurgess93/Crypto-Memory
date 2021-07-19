@@ -36,7 +36,7 @@
   /*-----Scoreboard-----*/
 
   .scoreboard {
-    height: 350px;
+    height: 400px;
     padding: 20px;
     background-color: #639FAB;
   }
@@ -130,6 +130,15 @@
     text-align: center;
     display: block;
     padding: 5px;
+}
+
+#feedback {
+    background-color: #1C5D99;
+    color: #eaeaee;
+    border-radius: 4px;
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 
