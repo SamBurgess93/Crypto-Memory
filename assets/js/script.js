@@ -167,8 +167,8 @@ function flipCard() {
     $('#addFeed').modal('show');
   });
 
-  $(".close-button").click(function () {
-    $('#addFeed').modal('hide');
+  $('.submit').click(function() {
+    setTimeout(function() {$('#addFeed').modal('hide');}, 1000);
   });
 
   $(".close").click(function () {
