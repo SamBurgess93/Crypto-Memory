@@ -153,3 +153,22 @@
   letter-spacing: 2px;
   background-color: #14110f; 
 }
+
+/* ---------- media queries ---------- */
+
+@media (max-width: 1200px) {
+  .row {
+      display: flex;
+  }
+
+  .logo {
+      width: 250px;
+      float: left;
+  } 
+
+  .scoreboard {
+      width: 320px;
+      float: left;
+      margin-top: 15px;
+  }
+}
