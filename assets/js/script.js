@@ -168,7 +168,9 @@ function flipCard() {
   });
 
   $('.submit').click(function() {
-    setTimeout(function() {$('#addFeed').modal('hide');}, 1000);
+    if ( ! $('form input:invalid' ).length ) {
+      setTimeout(function() {$('#addFeed').modal('hide');}, 1000);
+    }
   });
 
   $(".close").click(function () {
