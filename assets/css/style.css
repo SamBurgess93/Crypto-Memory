@@ -164,6 +164,8 @@
   .logo {
       width: 250px;
       float: left;
+      padding-top: 60px;
+      margin: 20px;
   } 
 
   .scoreboard {
