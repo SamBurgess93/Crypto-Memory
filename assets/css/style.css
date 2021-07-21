@@ -12,6 +12,20 @@
     background: #1C5D99;
   }
 
+  /* ---------- container ---------- */
+
+  .container {
+  margin: auto;
+  }
+
+
+  /* ---------- columns ---------- */
+
+  .column-padding {
+  padding: 20px;
+  }
+
+
 
   /*-----Text-----*/
 
