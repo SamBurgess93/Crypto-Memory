@@ -174,3 +174,15 @@
       margin-top: 15px;
   }
 }
+
+@media (max-width: 768px) {
+  .logo {
+      float: none;
+      width: 400px;
+  }
+
+  .scoreboard {
+      float: none;
+      width: 400px;
+  }
+}
