@@ -192,6 +192,7 @@
   .logo {
       float: none;
       width: 400px;
+      padding: 0;
   }
 
   .scoreboard {
