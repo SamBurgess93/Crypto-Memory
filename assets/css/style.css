@@ -213,3 +213,17 @@
     margin: 5px;
   }
 }
+
+@media (max-width: 390px) {
+
+  .memory-card img {
+    height: 80px;
+    width: 80px;
+  }
+
+  .memory-card {
+    width: 80px;
+    height: 80px;
+    margin: 5px;
+  }
+}
