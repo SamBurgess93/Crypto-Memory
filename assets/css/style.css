@@ -1,248 +1,237 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Teko&display=swap');
-
-
-  * {
-    margin: auto;    
-  }
-
-  body {
-    height: 100vh;
-    display: flex;
-    background: #1C5D99;
-  }
-
-  /* ---------- container ---------- */
-
-  .container {
-  margin: auto;
-  }
-
-
-  /* ---------- columns ---------- */
-
-  .column-padding {
-  padding: 20px;
-  }
-
-
-
-  /*-----Text-----*/
-
-  .text-style-head {
-    color: #e0ded0;
-    font-family: 'Teko', sans-serif;
-    text-align: center;
-    font-size: 60px;
-    margin-bottom: 8px;
+* {
+	margin: auto;
 }
 
-  .text-style {
-    color: #e0ded0;
-    font-family: 'Teko', sans-serif;
-    font-size: 20px;
-  }
+body {
+	height: 100vh;
+	display: flex;
+	background: #1C5D99;
+}
 
-  .teko{
-    font-family: 'Teko', sans-serif;
-  }
 
-  /*-----Scoreboard-----*/
+/* ---------- container ---------- */
 
-  .scoreboard {
-    height: 350px;
-    padding: 20px;
-    background-color: #639FAB;
-  }
+.container {
+	margin: auto;
+}
 
-  .icons {
-    font-size: 32px;
-    margin-bottom: 20px;
-    display: inline-block;
-    text-align: center;
-    width: 100%;
-    color: #e0ded0;
-  }
 
-  .icons i {
-    padding-left: 20px;
-    padding-right: 20px;
-  } 
+/* ---------- columns ---------- */
 
+.column-padding {
+	padding: 20px;
+}
+
+
+/*-----Text-----*/
+
+.text-style-head {
+	color: #e0ded0;
+	font-family: 'Teko', sans-serif;
+	text-align: center;
+	font-size: 60px;
+	margin-bottom: 8px;
+}
+
+.text-style {
+	color: #e0ded0;
+	font-family: 'Teko', sans-serif;
+	font-size: 20px;
+}
+
+.teko {
+	font-family: 'Teko', sans-serif;
+}
+
+
+/*-----Scoreboard-----*/
+
+.scoreboard {
+	height: 350px;
+	padding: 20px;
+	background-color: #639FAB;
+}
+
+.icons {
+	font-size: 32px;
+	margin-bottom: 20px;
+	display: inline-block;
+	text-align: center;
+	width: 100%;
+	color: #e0ded0;
+}
+
+.icons i {
+	padding-left: 20px;
+	padding-right: 20px;
+}
 
 
 /* Card Grid styling */
 
-  .memory-game {
-    width: 640px;
-    height: 640px;
-    margin: auto;
-    display: flex;
-    flex-wrap: wrap;
-    perspective: 1000px;
-    -webkit-perspective: 1000px;
-    -o-perspective: 1000px;
-    -moz-perspective: 1000px;
-  }
-  
+.memory-game {
+	width: 640px;
+	height: 640px;
+	margin: auto;
+	display: flex;
+	flex-wrap: wrap;
+	perspective: 1000px;
+	-webkit-perspective: 1000px;
+	-o-perspective: 1000px;
+	-moz-perspective: 1000px;
+}
 
-  .memory-card {
-    width: calc(25% - 10px);
-    height: calc(33.333% - 10px);
-    margin: 5px;
-    position: relative;
-    box-shadow: 1px 1px 1px rgba(0,0,0,.3);
-    transform: scale(1);
-    transform-style: preserve-3d;
-    transition: transform .5s;
-    -webkit-transform-style: preserve-3d;
-    -webkit-transition: -webkit-transform .5s;
-    -o-transform-style: preserve-3d;
-    -o-transition: -o-transform .5s;
-    -moz-transform-style: preserve-3d;
-    -moz-transition: -moz-transform .5s;
-  }
+.memory-card {
+	width: calc(25% - 10px);
+	height: calc(33.333% - 10px);
+	margin: 5px;
+	position: relative;
+	box-shadow: 1px 1px 1px rgba(0, 0, 0, .3);
+	transform: scale(1);
+	transform-style: preserve-3d;
+	transition: transform .5s;
+	-webkit-transform-style: preserve-3d;
+	-webkit-transition: -webkit-transform .5s;
+	-o-transform-style: preserve-3d;
+	-o-transition: -o-transform .5s;
+	-moz-transform-style: preserve-3d;
+	-moz-transition: -moz-transform .5s;
+}
 
-  .memory-card:active {
-    transform: scale(0.97);
-    transition: transform .2s;
-    -webkit-transform: scale(0.97);
-    -webkit-transition: transform .2s;
-    -o-transform: scale(0.97);
-    -o-transition: transform .2s;
-    -moz-transform: scale(0.97);
-    -moz-transition: transform .2s;
-  }
-  
-  .memory-card.flip {
-    transform: rotateY(180deg);
-    -moz-transform: rotateY(180deg);
-    -webkit-transform: rotateY(180deg);
-    -o-transform: rotateY(180deg);
-  }
+.memory-card:active {
+	transform: scale(0.97);
+	transition: transform .2s;
+	-webkit-transform: scale(0.97);
+	-webkit-transition: transform .2s;
+	-o-transform: scale(0.97);
+	-o-transition: transform .2s;
+	-moz-transform: scale(0.97);
+	-moz-transition: transform .2s;
+}
 
-  .front-face,
-  .back-face {
-    width: 100%;
-    height: 100%;
-    padding: 20px;
-    position: absolute;
-    border-radius: 5px;
-    background: #639FAB;
-    backface-visibility: hidden;
-    -moz-backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
-    -o-backface-visibility: hidden;
-  }
+.memory-card.flip {
+	transform: rotateY(180deg);
+	-moz-transform: rotateY(180deg);
+	-webkit-transform: rotateY(180deg);
+	-o-transform: rotateY(180deg);
+}
 
-  .front-face {
-    transform: rotateY(180deg);
-    -moz-transform: rotateY(180deg);
-    -webkit-transform: rotateY(180deg);
-    -o-transform: rotateY(180deg);
-  }
+.front-face,
+.back-face {
+	width: 100%;
+	height: 100%;
+	padding: 20px;
+	position: absolute;
+	border-radius: 5px;
+	background: #639FAB;
+	backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
+	-o-backface-visibility: hidden;
+}
+
+.front-face {
+	transform: rotateY(180deg);
+	-moz-transform: rotateY(180deg);
+	-webkit-transform: rotateY(180deg);
+	-o-transform: rotateY(180deg);
+}
+
 
 /* Score, Moves and Reset Button */
-  .score_moves_wrap {
-    text-align: center;
-}
 
 
 #reset {
-    background-color: #1C5D99;
-    color: #eaeaee;
-    border-radius: 4px;
-    text-align: center;
-    padding-left: 20px;
-    padding-right: 20px;
+	background-color: #1C5D99;
+	color: #eaeaee;
+	border-radius: 4px;
+	text-align: center;
+	padding-left: 20px;
+	padding-right: 20px;
 }
 
 .btn-container {
-    position: relative;
-    text-align: center;
-    display: block;
-    padding: 5px;
+	position: relative;
+	text-align: center;
+	display: block;
+	padding: 5px;
 }
 
 #feedback {
-    background-color: #1C5D99;
-    color: #eaeaee;
-    border-radius: 4px;
-    text-align: center;
-    padding-left: 20px;
-    padding-right: 20px;
+	background-color: #1C5D99;
+	color: #eaeaee;
+	border-radius: 4px;
+	text-align: center;
+	padding-left: 20px;
+	padding-right: 20px;
 }
 
 
 /* ---------- modal ---------- */
 
 .modal-title {
-  font-size: 55px;
+	font-size: 55px;
 }
 
 .close-button {
-  font-size: 24px;
-  letter-spacing: 2px;
-  background-color: #14110f; 
+	font-size: 24px;
+	letter-spacing: 2px;
+	background-color: #14110f;
 }
+
 
 /* ---------- media queries ---------- */
 
 @media (max-width: 1200px) {
-  .row {
-      display: flex;
-  }
-
-  .logo {
-      width: 250px;
-      float: left;
-      padding-top: 60px;
-      margin: 20px;
-  } 
-
-  .scoreboard {
-      width: 320px;
-      float: left;
-  }
+	.row {
+		display: flex;
+	}
+	.logo {
+		width: 250px;
+		float: left;
+		padding-top: 60px;
+		margin: 20px;
+	}
+	.scoreboard {
+		width: 320px;
+		float: left;
+	}
 }
 
 @media (max-width: 768px) {
-  .logo {
-      float: none;
-      width: 400px;
-      padding: 0;
-  }
-
-  .scoreboard {
-      float: none;
-      width: 250px;
-  }
+	.logo {
+		float: none;
+		width: 400px;
+		padding: 0;
+	}
+	.scoreboard {
+		float: none;
+		width: 250px;
+	}
 }
 
 @media (max-width: 480px) {
-
-  .memory-card img {
-    height: 130px;
-    width: 100px;
-  }
-
-  .memory-card {
-    width: 100px;
-    height: 100px;
-    margin: 5px;
-  }
+	.memory-card img {
+		height: 130px;
+		width: 100px;
+	}
+	.memory-card {
+		width: 100px;
+		height: 100px;
+		margin: 5px;
+	}
 }
 
 @media (max-width: 390px) {
-
-  .memory-card img {
-    height: 80px;
-    width: 80px;
-  }
-
-  .memory-card {
-    width: 80px;
-    height: 80px;
-    margin: 5px;
-  }
+	.memory-card img {
+		height: 80px;
+		width: 80px;
+	}
+	.memory-card {
+		width: 80px;
+		height: 80px;
+		margin: 5px;
+	}
 }
