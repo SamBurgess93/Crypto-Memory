@@ -130,10 +130,16 @@
     border-radius: 5px;
     background: #639FAB;
     backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
   }
 
   .front-face {
     transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
   }
 
 /* Score, Moves and Reset Button */
