@@ -225,12 +225,24 @@ body {
 
 @media (max-width: 390px) {
 	.memory-card img {
-		height: 100px;
-    width: 100px;
+		height: 90px;
+    width: 90px;
 	}
 	.memory-card {
-		width: 100px;
-    height: 100px;
+		width: 90px;
+    height: 90px;
+    margin: 5px;
+	}
+}
+
+@media (max-width: 340px) {
+	.memory-card img {
+		height: 87px;
+    width: 83px;
+	}
+	.memory-card {
+		width: 83px;
+    height: 79px;
     margin: 5px;
 	}
 }
