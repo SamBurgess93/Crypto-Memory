@@ -80,6 +80,9 @@
     display: flex;
     flex-wrap: wrap;
     perspective: 1000px;
+    -webkit-perspective: 100px;
+    -o-perspective: 1000px;
+    -moz-perspective: 1000px;
   }
   
 
@@ -124,11 +127,6 @@
     text-align: center;
 }
 
-@media only screen and (min-width: 992px) {
-    .score_moves_wrap {
-        padding: 10px;
-    }
-}
 
 #reset {
     background-color: #1C5D99;
