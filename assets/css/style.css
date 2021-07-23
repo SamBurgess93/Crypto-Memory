@@ -95,6 +95,12 @@
     transform: scale(1);
     transform-style: preserve-3d;
     transition: transform .5s;
+    -webkit-transform-style: preserve-3d;
+    -webkit-transition: -webkit-transform .5s;
+    -o-transform-style: preserve-3d;
+    -o-transition: -o-transform .5s;
+    -moz-transform-style: preserve-3d;
+    -moz-transition: -moz-transform .5s;
   }
 
   .memory-card:active {
