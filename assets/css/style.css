@@ -106,6 +106,12 @@
   .memory-card:active {
     transform: scale(0.97);
     transition: transform .2s;
+    -webkit-transform: scale(0.97);
+    -webkit-transition: transform .2s;
+    -o-transform: scale(0.97);
+    -o-transition: transform .2s;
+    -moz-transform: scale(0.97);
+    -moz-transition: transform .2s;
   }
   
   .memory-card.flip {
