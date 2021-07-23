@@ -1,3 +1,4 @@
+//emal.js fucntionality on feedback modal
 function sendMail(feedbackForm) {
     emailjs.send("service_pp24j2p","template_29yfchc", {
         "from_name": feedbackForm.name.value,

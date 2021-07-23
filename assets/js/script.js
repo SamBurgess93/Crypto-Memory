@@ -9,16 +9,14 @@ let playerScore = 0;
 let highScore = 0;
 let matches = 0;
 
-/* ---------- Local Storage ---------- */
-let localStorageBestScore = localStorage.getItem("lastRoundScore", playerScore);
-
 /* ---------- counting moves variables ---------- */
 let counter = document.getElementById('moves');
 var moves = 0;
 
+/* ---------- timer variables ---------- */
 const timeHour = document.getElementById('timer');
 
-/* ---------- Sound clips ---------- */
+/* ---------- sound variables ---------- */
 var flipSound = new Audio('assets/audio/flipCard.mp3');
 var matchSound = new Audio('assets/audio/correct.mp3');
 var rainSound = new Audio('assets/audio/rain.mp3');
@@ -28,177 +26,192 @@ rainSound.volume = 0.2;
 var playPauseIcon = document.getElementById('play-pause');
 var count = 0;
 
+/* ---------- Local Storage ---------- */
+let localStorageBestScore = localStorage.getItem("lastRoundScore", playerScore);
+
 
 /* ---------- Last Round Score ---------- */
 $("#highScore").text(localStorageBestScore);
 
 
+//event listener for each card
+cards.forEach(card => card.addEventListener('click', flipCard));
+
+/* ---------- Card flip function  ---------- */
 function flipCard() {
 
-  flipSound.play();
-  flipSound.currentTime = 0;
+	flipSound.play();
+	flipSound.currentTime = 0;
 
-  if (!gameOn) {
-    gameOn = true;
-    timer();
-    }
+  //starts timer on first card click
+	if (!gameOn) {
+		gameOn = true;
+		timer();
+	}
+  
+	if (lockBoard) return;
+	if (this === firstCard) return;
+	this.classList.add('flip');
 
-    if (lockBoard) return;
-    if (this === firstCard) return;
-    this.classList.add('flip');
-    
+  //prevent double click of 1st card
+	if (!hasFlippedCard) {
+		hasFlippedCard = true;
+		firstCard = this;
+		return;
+	}
+  //when second card is then clicked
+	secondCard = this;
+	checkForMatch();
+	countMoves();
 
-    if (!hasFlippedCard) {
-      hasFlippedCard = true;
-      firstCard = this;
-      return;
-    }
- 
-    secondCard = this;
-    checkForMatch();
-    countMoves();
-
-  }
-
-  // coded with help from https://www.youtube.com/watch?v=wffK2OIt8u0
-  function playPauseIt() {
-  if (count == 0) {
-      count = 1;
-      rainSound.play();
-      playPauseIcon.className = "fas fa-volume-up";
-  } else {
-      count = 0;
-      rainSound.pause();
-      playPauseIcon.className = "fas fa-volume-mute";
-  }
 }
- 
-  function checkForMatch() {
-    if (firstCard.dataset.coin === secondCard.dataset.coin) {
-      updateScore(50);
-      disableCards();
-      matches = matches + 1;
-      matchSound.play();
-      matchSound.currentTime = 0;
-        if (matches == 6) {
-            console.log("hey");
-            localStorage.setItem("lastRoundScore", playerScore);
-        }
-    } 
-     else{
-      updateScore(-20);
-      unflipCards();
-      
-      }
-      if (matches === 6) {
-        $("#winModal").modal("show");
-    }
-  }
- 
-  function disableCards() {
-    firstCard.removeEventListener('click', flipCard);
-    secondCard.removeEventListener('click', flipCard);
-    resetBoard();
-  }
- 
-  function unflipCards() {
-    lockBoard = true;
-    
-    setTimeout(() => {
-      firstCard.classList.remove('flip');
-      secondCard.classList.remove('flip');
-      flipSound.play();
-      resetBoard();
-    }, 1500);
-  }
+
+/* ---------- play/pause background music ---------- */
+// coded with help from https://www.youtube.com/watch?v=wffK2OIt8u0
+function playPauseIt() {
+	if (count == 0) {
+		count = 1;
+		rainSound.play();
+		playPauseIcon.className = "fas fa-volume-up";
+	} else {
+		count = 0;
+		rainSound.pause();
+		playPauseIcon.className = "fas fa-volume-mute";
+	}
+}
+
+/* ---------- checks if chosen two cards match  ---------- */
+function checkForMatch() {
+
+  // if cards match disable cards, update score and moves
+	if (firstCard.dataset.coin === secondCard.dataset.coin) {
+		updateScore(50);
+		disableCards();
+		matches = matches + 1;
+		matchSound.play();
+		matchSound.currentTime = 0;
+    //when all matches are found update last round score
+		if (matches == 6) {
+			localStorage.setItem("lastRoundScore", playerScore);
+		}
+    //if cards dont match update score and unflip the cards
+	} else {
+		updateScore(-20);
+		unflipCards();
+
+	}
+  //when all matches are found show win modal 
+	if (matches === 6) {
+		$("#winModal").modal("show");
+	}
+}
+
+//disables the cards
+function disableCards() {
+	firstCard.removeEventListener('click', flipCard);
+	secondCard.removeEventListener('click', flipCard);
+	resetBoard();
+}
+
+//flips the cards back around
+function unflipCards() {
+	lockBoard = true;
+
+	setTimeout(() => {
+		firstCard.classList.remove('flip');
+		secondCard.classList.remove('flip');
+		flipSound.play();
+		resetBoard();
+	}, 1500);
+}
 
 
-
-  // Time display function 
-  let time;
-  let minutes = 0;
-  let seconds = 0;
-  let timeStart = false;
-  timeHour.innerHTML = minutes + " : " + seconds;
-  
- 
-  function timer() {
-      time = setInterval(function() {
-          seconds++;
-          if (seconds === 59) {
-              minutes++;
-              seconds = 0;
-          }
-          if (matches == 6) {
-            clearInterval(time);
-          }  
-          timeHour.innerHTML = minutes + " : " + seconds;
-      }, 1000);
-  }
-
-  function resetBoard() {
-    [hasFlippedCard, lockBoard] = [false, false];
-    [firstCard, secondCard] = [null, null];
-  }
-
-  (function shuffle() {
-    cards.forEach(card => {
-      let ramdomPos = Math.floor(Math.random() * 12);
-      card.style.order = ramdomPos;
-    });
-  })();
-
-  //Instructions Modal   
-  $("#how-to").click(function () {
-    $("#myModal").modal('show');
-  });
-
-  $(".close").click(function () {
-    $('#myModal').modal('hide');
-  });
-
-  $(".close-button").click(function () {
-    $('#myModal').modal('hide');
-  });
+// Time display function 
+let time;
+let minutes = 0;
+let seconds = 0;
+let timeStart = false;
+timeHour.innerHTML = minutes + " : " + seconds;
 
 
-  //Feedback Modal  
-  $("#feedback").click(function () {
-    $('#addFeed').modal('show');
-  });
+function timer() {
+	time = setInterval(function () {
+		seconds++;
+		if (seconds === 59) {
+			minutes++;
+			seconds = 0;
+		}
+		if (matches == 6) {
+			clearInterval(time);
+		}
+		timeHour.innerHTML = minutes + " : " + seconds;
+	}, 1000);
+}
 
-  $('.submit').click(function() {
-    if ( ! $('form input:invalid' ).length ) {
-      setTimeout(function() {$('#addFeed').modal('hide');}, 1000);
-    }
-  });
+//resets board
+function resetBoard() {
+	[hasFlippedCard, lockBoard] = [false, false];
+	[firstCard, secondCard] = [null, null];
+}
 
-  $(".close").click(function () {
-    $('#addFeed').modal('hide');
-  });
+//shuffles the deck
+(function shuffle() {
+	cards.forEach(card => {
+		let ramdomPos = Math.floor(Math.random() * 12);
+		card.style.order = ramdomPos;
+	});
+})();
+
+//how to play modal   
+$("#how-to").click(function () {
+	$("#myModal").modal('show');
+});
+
+$(".close").click(function () {
+	$('#myModal').modal('hide');
+});
+
+$(".close-button").click(function () {
+	$('#myModal').modal('hide');
+});
 
 
-  
+//feedback Modal  
+$("#feedback").click(function () {
+	$('#addFeed').modal('show');
+});
 
-  function updateScore(scoreMod) {
-    playerScore = playerScore + scoreMod;
+$('.submit').click(function () {
+	if (!$('form input:invalid').length) {
+		setTimeout(function () {
+			$('#addFeed').modal('hide');
+		}, 1000);
+	}
+});
 
-    let score = document.getElementById("currentScore");
-    score.innerText = playerScore;
+$(".close").click(function () {
+	$('#addFeed').modal('hide');
+});
 
-  }
+//updates the score 
+function updateScore(scoreMod) {
+	playerScore = playerScore + scoreMod;
+
+	let score = document.getElementById("currentScore");
+	score.innerText = playerScore;
+
+}
 
 
-  // coded with help from https://scotch.io/tutorials/how-to-build-a-memory-matching-game-in-javascript#toc-3-moves
-  function countMoves() {
-  moves++;
-  counter.innerHTML = moves;
-  }
+// coded with help from https://scotch.io/tutorials/how-to-build-a-memory-matching-game-in-javascript#toc-3-moves
+function countMoves() {
+	moves++;
+	counter.innerHTML = moves;
+}
 
-  // resets the board
-  function reset() {
-    location.reload();
-  }
+// resets the game
+function reset() {
+	location.reload();
+}
 
-    
-cards.forEach(card => card.addEventListener('click', flipCard));
+

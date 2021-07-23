@@ -1,9 +1,10 @@
-
+/* ---------- font ---------- */
 @import url('https://fonts.googleapis.com/css2?family=Teko&display=swap');
 * {
 	margin: auto;
 }
 
+/* ---------- body styling ---------- */
 body {
 	height: 100vh;
 	display: flex;
@@ -25,7 +26,7 @@ body {
 }
 
 
-/*-----Text-----*/
+/*-----text-----*/
 
 .text-style-head {
 	color: #e0ded0;
@@ -46,7 +47,7 @@ body {
 }
 
 
-/*-----Scoreboard-----*/
+/*-----scoreboard-----*/
 
 .scoreboard {
 	height: 350px;
@@ -69,7 +70,7 @@ body {
 }
 
 
-/* Card Grid styling */
+/*---- card grid styling-----*/
 
 .memory-game {
 	width: 640px;
@@ -140,7 +141,7 @@ body {
 }
 
 
-/* Score, Moves and Reset Button */
+/*----button-----*/
 
 
 #reset {
