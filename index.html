@@ -19,8 +19,9 @@
     <body>
         <div class="container">
             <div class="row">
-                <!-- Cards -->
+                <!-- Cards Section -->
                 <div class="col-xlg-7 column-padding memory-game">
+                    <!-- Cards -->
                     <div class="memory-card" data-coin="bitcoin">
                         <img class="front-face" src="assets/img/bitcoin.png" alt="React">
                         <img class="back-face" src="assets/img/backcard.png" alt="Memory Card">
@@ -72,25 +73,25 @@
                 </div>
                 <!-- Scoreboard section -->
                 <div class="col-xlg-5 column-padding">
-                    <!-- h1 -->
+                    <!-- Heading -->
                     <div class = "logo">
                         <h1 class="text-style-head">Crypto Memory</h1>
                     </div>
                     <!-- ScoreBoard -->
                     <div class="scoreboard">
-                        <!-- fontawesome icons -->
+                        <!-- icons -->
                         <div class="icons">
                             <i class="fas fa-volume-mute" id="play-pause" onclick="playPauseIt()"></i>
                             <i class="fas fa-question" id="how-to"></i>
                         </div>
-                        <!-- moves and high score -->
+                        <!-- Moves,Timer and Last Round score -->
                         <div class="moves-high-score">
                             <p class="text-style">Moves: <span id="moves">0</span></p>
                             <p class="text-style time">Timer: <span id="timer">00:00</span></p>
                             <p class="text-style">Score: <span id="currentScore">0</span></p>
                             <p class="text-style">Last Round Score: <span id="highScore">0</span></p>
                         </div>
-                        <!-- Reset button-->
+                        <!-- Reset & Feedback buttons-->
                         <div class="btn-container">
                             <button id="reset" class=" btn btn-light btn-xl text-style reset" type="reset" onclick="reset()">Reset</button>
                             <button class=" btn btn-light btn-xl text-style feedback"  data-toggle="modal" id="feedback">Contact Us</button>
