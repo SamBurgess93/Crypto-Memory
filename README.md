@@ -154,7 +154,7 @@ Main Page:
 
      - A General palette was created, with this atmosphere in mind, and was used in designing graphics and complimentary text colour:
 
-          ![Colors](assets/readme-files/palette.png "General Colour Palette")
+          ![Colors](assets/readMe/color.png "General Colour Palette")
 
 
 
@@ -192,8 +192,7 @@ Included in the **game** is:
 
 ### **Features Left to Implement**
 
-- Add music for user experience.
-- **HighScore:** .
+- **HighScore:** Add a Overall High score that would be changed in session storage
 - Add a more designed successful sent message when sending a message from the modal form. 
 - **Beat The Clock**
      - Allowing users to race against the clock in their chosen category. 
