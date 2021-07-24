@@ -193,11 +193,9 @@ Included in the **game** is:
 ### **Features Left to Implement**
 
 - **HighScore:** Add a Overall High score that would be changed in session storage
-- Add a more designed successful sent message when sending a message from the modal form. 
-- **Beat The Clock**
-     - Allowing users to race against the clock in their chosen category. 
-     - The developer did try to implement this feature in the current release but it created a bug that was, unfortunately, beyond their skill level. After further learning, the developer hopes to apply this to future releases.
-- An online leadership board, allowing players to see the High Scores of other players.
+- **Difficulty:** Add difficulty setting to make the grid bigger if desired.
+- **Light/Dark mode:** Two different themes that the player could choose between.
+- **Online Leaderboard** An online leadership board, allowing players to see the High Scores of other players.
      - This would require the use of a database in order to implement. 
 - **404 page:** A message telling the user they have accessed a page that does not exist. Including a button that is linked to index.html that prompts them to return to the site.
 
@@ -239,15 +237,8 @@ Included in the **game** is:
 
 ## Testing
 
-### Testing planning
-### Execution
+[Click here to view the testing for this project!](assets/testing/testing.md)
 
-
-
-## Results and outcomes
-
-### Validator
-### Lighthouse
 
 ## Deployment
 
