@@ -19,20 +19,14 @@
      2. [Additional Languages Used](#additional-languages-used)
      3. [Frameworks and Programs Used](#frameworks-and-programs-used)
 5. [Testing](#testing)
-     1. [Testing planning](#testing-planning)
-     2. [Execution](#execution)
-6. [Results and outcomes](#results-and-outcomes)
-     1. [Validator](#validator)
-     2. [Lighthouse](#lighthouse)
-7. [Bugs](#bugs)
-8. [Deployment](#deployment)
+6. [Deployment](#deployment)
      1. [Deploying on GitHub Pages](#deploying-on-github-pages)
      2. [Forking the Repository](#forking-the-repository)
      3. [Creating a Clone](#creating-a-clone)
-9. [Credits](#credits)
+7. [Credits](#credits)
      1. [Images](#images)
      2. [Code](#code)
-10. [Acknowledgements](#acknowledgements)
+8. [Acknowledgements](#acknowledgements)
 ***
 
 ## UX 
