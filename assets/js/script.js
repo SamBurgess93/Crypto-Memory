@@ -131,7 +131,7 @@ let time;
 let minutes = 0;
 let seconds = 0;
 
-timeHour.innerHTML = minutes + " : " + seconds;
+timeHour.innerHTML = minutes.toLocaleString(undefined,{minimumIntegerDigits: 2}) + " : " + seconds.toLocaleString(undefined,{minimumIntegerDigits: 2});
 
 
 function timer() {
@@ -144,7 +144,7 @@ function timer() {
 		if (matches == 6) {
 			clearInterval(time);
 		}
-		timeHour.innerHTML = minutes + " : " + seconds;
+		timeHour.innerHTML = minutes.toLocaleString(undefined,{minimumIntegerDigits: 2}) + " : " + seconds.toLocaleString(undefined,{minimumIntegerDigits: 2});
 	}, 1000);
 }
 

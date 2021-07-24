@@ -75,7 +75,14 @@ All of the above tests were done in the Google Chrome Device Toolbar on the foll
 
 I also tested with other screens I have also;
 
-Samsung S9 mobile
-23.8" Desktop Screen (1920 x 1080)
-Laptop 14" (1920 x 1080)
+- Samsung S9 mobile
+- 23.8" Desktop Screen (1920 x 1080)
+- Laptop 14" (1920 x 1080)
+
+- Checking Responsiveness.
+    - Check that the content fits into the different viewports with no side scroll behaviour.
+    - Check that on smaller screen the cards are 3 in each row with scoreboard below.
+    - Check that modals pops up and closes correctly!
+
+
 

@@ -145,7 +145,7 @@ body {
 
 
 #reset {
-	background-color: #1C5D99;
+	background-color: #db8c18;
 	color: #eaeaee;
 	border-radius: 4px;
 	text-align: center;
@@ -221,15 +221,20 @@ body {
     height: 110px;
     margin: 5px;
 	}
+
+	.front-face,
+	.back-face {
+	padding: 10px;
+	}
 }
 
 @media (max-width: 390px) {
 	.memory-card img {
-		height: 90px;
+	height: 90px;
     width: 90px;
 	}
 	.memory-card {
-		width: 90px;
+	width: 90px;
     height: 90px;
     margin: 5px;
 	}
@@ -237,11 +242,11 @@ body {
 
 @media (max-width: 340px) {
 	.memory-card img {
-		height: 87px;
+	height: 87px;
     width: 83px;
 	}
 	.memory-card {
-		width: 83px;
+	width: 83px;
     height: 79px;
     margin: 5px;
 	}

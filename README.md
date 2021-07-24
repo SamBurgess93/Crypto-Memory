@@ -2,7 +2,7 @@
 
 ![Preview](assets/readMe/responsive.png)
 
-[Link to the Live Project](https://github.com/SamBurgess93/Crypto-Memory).
+[Link to the Live Project](https://samburgess93.github.io/Crypto-Memory/).
 
 ## Table of contents
 1. [Introduction](#introduction)
