@@ -106,3 +106,10 @@ The user testing is based on the user stores from the README file.
     - The player has the ability to leave some feedback to improve the game by using the contact us modal.
 8. **..Have the option to play the game on any device, whether it be desktop, tablet or mobile phone..**
     - The player will be able to play on any device as the design is simplistic and responsive to any screen size.
+
+## Bugs
+* **Fixed!** When testing the game on my iPhone/iPad the memory cards wouldn't turn properly when clicking on them. 
+This seemed to look fine when I tried the game out in device toolbar in my Chrome browser. 
+The feature of flipping the cards did not seem to be supported by Safari browsers so I solved this problem by 
+adding a webkit attribute in my css code.
+* **Fixed!** When I was first testing the responsiveness of my code it didnt look great on smaller devices. This is when I 
