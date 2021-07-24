@@ -84,5 +84,25 @@ I also tested with other screens I have also;
     - Check that on smaller screen the cards are 3 in each row with scoreboard below.
     - Check that modals pops up and closes correctly!
 
+## User testing
+The user testing is based on the user stores from the README file.
 
+**As a player, I want to:**
 
+1. **..play a game I enjoy**
+    - Testing our memory is a classic way of having fun. The sense of achievement gained from finding a matching pair 
+    makes this game enjoyable and entcies the user to come back and keep playing.
+2. **..Make the process of starting the game intuitive..**
+    - The design of the cards themselves invite the user to click on them hence starting the game.
+3. **..To be able track my progress during the game, with a clear score counter..**
+    - the scoreboard section contains the score counter that live tracks the score, whether it goes up or down.
+4. **..Clearly know when my answers are correct through audio feedback..**
+    - The sounds effects used are subtle and are only used when a player finds a correct match.
+5. **..Have the ability to toggle background music on or off..**
+    - The electronic background music is optional and can be toggled on and off by the speaker icon.
+6. **..View the score for my previous session, creating a target to beat..**
+    - In the scoreboard section the previous rounds score is displayed underneath the live score.
+7. **..Have the ability to communicate with the developer to provide feedback on the overall experience, to improve the game..**
+    - The player has the ability to leave some feedback to improve the game by using the contact us modal.
+8. **..Have the option to play the game on any device, whether it be desktop, tablet or mobile phone..**
+    - The player will be able to play on any device as the design is simplistic and responsive to any screen size.

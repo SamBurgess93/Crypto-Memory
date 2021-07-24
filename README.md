@@ -54,11 +54,11 @@ The Developer is looking to:
 **As a player, I want to:**
 
 
-1. Have the ability to create my own username, to personalise the experience.
+1. Play a game I enjoy.
 2. Make the process of starting the game intuitive. 
 3. To be able track my progress during the game, with a clear score counter.
 4. Clearly know when my answers are correct through audio feedback.
-5. Have the ability to toggle sound effects on or off.
+5. Have the ability to toggle background music on or off.
 6. View the score for my previous session, creating a target to beat.
 7. Have the ability to communicate with the developer to provide feedback on the overall experience, to improve the game.
 8. Have the option to play the game on any device, whether it be desktop, tablet or mobile phone.
