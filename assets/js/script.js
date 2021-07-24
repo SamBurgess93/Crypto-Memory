@@ -1,4 +1,5 @@
 
+/*jshint esversion: 6 */
 /* ---------- game variables ---------- */
 const cards = document.querySelectorAll('.memory-card');
 let hasFlippedCard = false;
@@ -6,7 +7,6 @@ let lockBoard = false;
 let firstCard, secondCard;
 let gameOn = false;
 let playerScore = 0;
-let highScore = 0;
 let matches = 0;
 
 /* ---------- counting moves variables ---------- */
@@ -130,7 +130,7 @@ function unflipCards() {
 let time;
 let minutes = 0;
 let seconds = 0;
-let timeStart = false;
+
 timeHour.innerHTML = minutes + " : " + seconds;
 
 
