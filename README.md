@@ -1,8 +1,8 @@
-# Recall
+# CryptoMemory
 
-![Preview](assets/readme-assets/??????.png)
+![Preview](assets/readMe/responsive.png)
 
-[Link to the Live Project](https://github.com/SamBurgess93/Recall).
+[Link to the Live Project](https://github.com/SamBurgess93/Crypto-Memory).
 
 ## Table of contents
 1. [Introduction](#introduction)
@@ -10,6 +10,7 @@
     1. [Project Goals](#project-goals)
     2. [User Stories](#user-stories)
     3. [Development Planes](#development-planes)
+    4. [Changes Made During Project Development](#changes-made-during-project-development)
 3. [Features](#features)
     1. [Existing Features](#existing-features)
     2. [Features to Implement in the future](#features-to-implement-in-the-future)
@@ -36,7 +37,7 @@
 
 ## UX 
 ### Project Goals
-The primary goal of RECALL is to provide a web-based interactive game, that is fun and intuitive, through a pattern memory game, designed to test the users ability to recall information thats shown to them.
+The primary goal of Crypto Memory is to provide a web-based interactive game, that is fun and intuitive, through a pattern memory game, designed to test the users ability to recall information thats shown to them.
  
 This is my second Milestone Project that must be developed as part of my Full Stack software development course with Code Institute.
 
@@ -45,7 +46,7 @@ The main requirements were to design, develop and implement a dynamic front-end 
 #### Player Goals
 The player is looking for:
 - An enjoyable and entertaining game to play, with clear instructions.
-- High Score system that promotes the user to return to the game. 
+- Scoring system that promotes the user to return to the game. 
 - An intuitive and vibrant interface. 
 - Visual and audio stimulation during play time.
 
@@ -62,13 +63,11 @@ The Developer is looking to:
 1. Have the ability to create my own username, to personalise the experience.
 2. Make the process of starting the game intuitive. 
 3. To be able track my progress during the game, with a clear score counter.
-4. Clearly know when my answers are correct/incorrect through visual and auditory feedback.
+4. Clearly know when my answers are correct through audio feedback.
 5. Have the ability to toggle sound effects on or off.
-6. View the highest score for my session, using a high score counter.
-7. Have control on what happens on the end each game, to either play again or end the session.
-8. Connect with the developer on a social platform of my choosing to see their other projects.
-9. Have the ability to communicate with the developer to provide feedback on the overall experience, to improve the game.
-10. Have the option to play the game on any device, whether it be desktop, tablet or mobile phone.
+6. View the score for my previous session, creating a target to beat.
+7. Have the ability to communicate with the developer to provide feedback on the overall experience, to improve the game.
+8. Have the option to play the game on any device, whether it be desktop, tablet or mobile phone.
 
 
 ### Development Planes
@@ -97,15 +96,13 @@ Broken into three categories, the website will focus on the following target aud
 The website needs to enable the **user** to:
 - Play with ease, interacting without complications
 - Control sound settings
-- See Current and High Scores
+- See previous rounds score
 - Get access to instructions if needed
 - Provide suggestions and feedback to the developer
-- Connect with developer through social links
 
 The website needs to enable the **client** to:
 - Enjoy playing their own game
 - Allow for user feedback and suggestions
-- Communicate with users on social links
 
 <strong>2. <u>Scope</u></strong>
 
@@ -114,23 +111,25 @@ The scope was created from using the Strategy previously defined. This allowed u
      - The player will be looking for:
           - Dynamic and inviting visuals
           - Simple and vibrant content
-          - Current and High scores
-          - Creator information 
+          - Statistics on their progress
+
 
 - **Functionality Requirements**
      - The user will be able to:
           - Play with ease
-          - Access Current and High Scores
+          - Access Current and Previous Scores
           - Reach out to the developer
                - Suggestions
-               - Social links
+
 
 
 <strong>3. <u>Structure</u></strong>
 
-The information architecture was organized in a **hierarchial tree structure** in order to ensure that users could navigate through the site with ease and efficiency, with the following results: 
+When looking at my structural plane I wanted to keep things simple for the user. It contains 2 main sections:
 
-![Site Map](assets/readme-files/????.png)
+- Card Area 
+- Scoreboard/Logo Area
+
 
 <strong>4. <u>Skeleton</u></strong>
 
@@ -161,10 +160,16 @@ Main Page:
 
 - <strong>Typography</strong>
 
-     - The primary font chosen is [Roboto](https://fonts.google.com/specimen/Roboto?preview.text_type=custom&query=roboto). A sans-serif typeface, Roboto is geometrically shaped and is easily readable.
+     - The primary font chosen is [Teko](https://fonts.google.com/specimen/Teko?preview.text_type=custom&query=teko). A sans-serif typeface, Teko is geometrically shaped and is easily readable.
 
      - The charismatic combination of the typefaces compliments the clean aesthetic and entertaining theme set by the colour palette.
 
+### Changes Made During Project Development 
+- When looking at the wireframes it is clear to see there was been a few chnages along the way since the early stages of the idea. I orginally planned for a pattern to light up
+on the grid shown and the user to press the sqaures in the same pattern they had just seen. I had decided that this option was quite plain and uninviting as there was no theme involved.
+I then chose to use the theme of cryptocurrencies as it is a popular topic in society at this time. I decided to use different crypto logos to create a card matching game which would be more inviting for the user. Hence the title was changed from "RECALL" to "Crypto Memory".
+
+- In the orginal idea I wanted the game information to be placed near the bottom of the screen. As the project developed however I wanted to create a scorebaord area that held the game info/stats that could move dynamically around the screen depending on which device it was being played. This would show the current score, timer and moves as well as the area you reset the game, toggled the sound and could leave feedback for the developer.  
 
 [Back to top ⇧](#table-of-contents)
 
@@ -175,29 +180,27 @@ Main Page:
 
 Included in the **game** is:
 
-- **Logo and developers name:** A logo telling the name of the game "RECALL" and who it is by.  
-- **Start a game button:** To begin the game.  
-- **How To Play button:** Where the user can click and a modal shows up explaining the way to interact with the game.
-- **Contact button:** Where the user can click and modal pop up with a contact form and socials(leads to external sites). The user can then fill out the form with email and message query (with validation, “@” and “.” etc.) and submitted to contact the developer.
-- **Option buttons:** To give the user options and make use of their decision-making skills. 
-- **Try Again button:** In the end there will be an option to try the game again for a different outcome.
-- **HighScore:** . 
-- **Social Icons** -  The chosen social platforms are displayed using appropriate icons.
-- **Time Counter** - A time counter, displaying the time elapsed since page load, gives users feedback on how long they have been playing, in minutes and seconds. This is then displayed at game end.
-- **Session Storage** - The `sessionStorage` function is used to store user information such as **username**, player's **high score** and the chosen **user preferences**.
-- **Current Score:** To tell the player what their live score is in real time.
-- **404 page:** A message telling the user they have accessed a page that does not exist. Including a button that is linked to index.html that prompts them to return to the site.
+- **Logo** A logo telling the name of the game "Crypto Memory". 
+- **How To Play button:** Where the user can click and a modal shows up explaining the way to play the game.
+- **Feedback button:** Where the user can click and modal pop up with a contact form. The user can then fill out the form with email and feedback message (with validation) and submitted to contact the developer to suggest improvements that coudl be implemented in teh future to enhance the experience.
+- **Reset button:** A button to reset the game to try again.
+- **Time Counter** - A time counter, displaying the time elapsed since page load, gives users feedback on how long they have been playing, in minutes and seconds.
+- **Session Storage** - The `sessionStorage` function is used to store the user score from the previous round.
+- **Current Score:** To tell the player what their live score is in real time. This score counter goes up and down depending on how many correct/incorrect matches the user has.
+
 
 
 ### **Features Left to Implement**
 
 - Add music for user experience.
+- **HighScore:** .
 - Add a more designed successful sent message when sending a message from the modal form. 
 - **Beat The Clock**
      - Allowing users to race against the clock in their chosen category. 
      - The developer did try to implement this feature in the current release but it created a bug that was, unfortunately, beyond their skill level. After further learning, the developer hopes to apply this to future releases.
 - An online leadership board, allowing players to see the High Scores of other players.
      - This would require the use of a database in order to implement. 
+- **404 page:** A message telling the user they have accessed a page that does not exist. Including a button that is linked to index.html that prompts them to return to the site.
 
 [Back to top ⇧](#table-of-contents)    
 
