@@ -62,6 +62,7 @@ body {
 	text-align: center;
 	width: 100%;
 	color: #e0ded0;
+	cursor: pointer;
 }
 
 .icons i {
@@ -89,6 +90,7 @@ body {
 	height: calc(33.333% - 10px);
 	margin: 5px;
 	position: relative;
+	cursor: pointer;
 	box-shadow: 1px 1px 1px rgba(0, 0, 0, .3);
 	transform: scale(1);
 	transform-style: preserve-3d;
